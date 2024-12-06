@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Cambia a blanco */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.boton-regresar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas según el tamaño de la pantalla */
+    gap: 30px; /* Aumenta el espacio entre las imágenes */
+    padding: 20px;
+    margin: 0 auto; /* Esto centra el contenedor en el ancho de la página */
+    max-width: 1200px; /* Máximo ancho del contenedor */
+}
+
+.imagen {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px; /* Altura fija para todas las imágenes */
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo de la columna */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes se ajusten al contenedor sin distorsionarse */
+    transition: transform 0.3s;
+}
+
+.imagen img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;   /* Ajusta el ancho máximo al 90% del contenedor */
+    max-height: 90vh; /* Ajusta la altura máxima al 90% de la altura de la ventana */
+    object-fit: contain;  /* Asegura que la imagen mantenga su proporción */
+}
+
+.close {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+}
+
+

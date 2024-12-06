@@ -1,0 +1,459 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 50px; /* Espacio para no cubrir contenido debajo de la barra fija */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed; /* Hace que la barra de menú sea fija */
+    top: 0; /* La coloca en la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    right: 0; /* Alinea a la derecha */
+    z-index: 1000; /* Asegura que la barra esté encima de otros elementos */
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.banner {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px 0;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Altura del carrusel */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustar la imagen */
+}
+.slide active{
+    width: 10vw;
+}
+
+.footer {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación centrada */
+    padding: 20px 0; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.footer-content {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.social-links {
+    list-style: none; /* Sin puntos en la lista */
+    padding: 0; /* Sin padding */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: center; /* Centramos los elementos */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+.social-links li {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+}
+
+.social-links a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.historia {
+    background-color: #f9f9f9; /* Color de fondo suave */
+    padding: 40px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.historia-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.historia-imagen {
+    width: 40%; /* Ajusta según necesites */
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.historia-texto {
+    width: 55%; /* Ajusta según necesites */
+}
+
+.historia-texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.historia-texto blockquote {
+    margin: 20px 0;
+    font-style: italic;
+    border-left: 4px solid #333;
+    padding-left: 15px;
+    color: #555;
+}
+
+.tradiciones {
+    background-color: #f0f4f8; /* Color de fondo suave */
+    padding: 40px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.tradiciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsivo */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.tradicion {
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Animación al pasar el mouse */
+}
+
+.tradicion:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+.tradicion-imagen {
+    width: 100%; /* Imagen ocupa el ancho completo */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Espacio entre imagen y texto */
+}
+
+.tradicion h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.tradicion p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.galeria {
+    background-color: #eef; /* Color de fondo suave */
+    padding: 40px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsivo */
+    gap: 15px; /* Espacio entre las imágenes */
+}
+
+.galeria-imagen {
+    width: 100%; /* Imagen ocupa el ancho completo de su contenedor */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: transform 0.2s; /* Animación al pasar el mouse */
+}
+
+.galeria-imagen:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilos para el lightbox */
+.lightbox {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-imagen {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mapa {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que no haya desbordes */
+}
+
+.mapa iframe {
+    width: 100%; /* Hace que el mapa ocupe todo el ancho */
+    height: 400px; /* Ajusta la altura según prefieras */
+}
+
+#flora-fauna {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+h2, h3 {
+    color: #4CAF50;
+}
+
+.flora, .fauna {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.flora-item, .fauna-item {
+    flex: 1 1 30%; /* Hace que cada ítem ocupe el 30% del ancho */
+    text-align: center;
+}
+
+.flora-imagen, .fauna-imagen {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+}
+
+.tradicion-imagen3{
+    width: 20vw;
+    height:15vw;
+    border-radius: 8px;
+}
+.fauna-imagen{
+    width: 70%;
+    height: 60%;
+}
+.flora-imagen{
+    width: 70%;
+    height: 60%;
+}
+.galeria-imagen-1{
+    width: 14vw;
+    height: 20vw;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: transform 0.2s; /* Animación al pasar el mouse */
+}
+.galeria-imagen-1:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+.tradicion-imagen-pacua{
+    width: 20vw;
+    height: 15vw;
+}
+/* Estilos para los botones "Ver más imágenes" */
+.tradicion {
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Animación al pasar el mouse */
+    text-align: center;  /* Centra el contenido dentro de la tarjeta */
+}
+
+.boton-ver-mas {
+    display: inline-block;  /* El botón se comporta como un bloque en línea */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #007BFF; /* Azul claro (puedes ajustarlo) */
+    color: white;  /* Texto en blanco */
+    text-decoration: none; /* Eliminar el subrayado */
+    font-size: 16px;  /* Ajusta el tamaño del texto */
+    border-radius: 5px;  /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    transition: background-color 0.3s, transform 0.3s ease;  /* Transición para hover */
+    margin-top: 15px; /* Espaciado superior */
+}
+
+.boton-ver-mas:hover {
+    background-color: #0056b3;  /* Color de fondo cuando se pasa el ratón (más oscuro) */
+    transform: translateY(-3px);  /* Desplazamiento hacia arriba al hacer hover */
+}
+
+.boton-ver-mas:focus {
+    outline: none; /* Elimina el contorno al hacer click */
+}
+
+/* Responsividad para los botones */
+@media (max-width: 600px) {
+    .boton-ver-mas {
+        width: auto;  /* El botón mantiene su tamaño según el contenido */
+    }
+}
+
+
+
+
+
+/* Estilo para la sección de aspectos */
+.aspectos {
+    padding: 40px;
+    text-align: center;
+}
+
+.aspectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    position: relative;
+    width: 350px; /* Aumento el tamaño de la tarjeta (ancho) */
+    height: 350px; /* Aumento el tamaño de la tarjeta (alto) */
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; /* Asegura que todo el contenido dentro de la tarjeta se centre */
+}
+
+/* Estilo del contenido dentro de la tarjeta */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center; /* Asegura que el texto dentro de la tarjeta esté centrado */
+    z-index: 1;  /* Asegura que el contenido principal (titulo) quede encima */
+    transition: opacity 0.3s ease; /* Añadimos una transición para suavizar el ocultamiento del título */
+}
+
+/* Título dentro de la tarjeta */
+.card-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: white; /* Título en color blanco */
+    padding: 10px; /* Un poco de espacio alrededor del título */
+    z-index: 1;  /* Asegura que el título esté sobre la capa de la info */
+}
+
+/* Información que aparecerá al pasar el cursor */
+.card .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la info */
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center; /* Asegura que el texto de la información esté centrado */
+    border-radius: 10px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Cuando pasas el cursor sobre la tarjeta */
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover .info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Oculta el título cuando el cursor pasa sobre la tarjeta */
+.card:hover .card-content h3 {
+    opacity: 0;  /* El título se vuelve invisible */
+    visibility: hidden;  /* Asegura que el título no se vea */
+    z-index: 0;  /* Coloca el título debajo de la capa de la información */
+}
